@@ -22,7 +22,7 @@ nnoremap ; <Right>
 nnoremap l <Up>
 nnoremap k <Down>
 nnoremap j <Left>
-nnoremap h <Nop>
+nnoremap h ; 
 
 nnoremap <C-;> <C-l>
 nnoremap <C-l> <C-k>
