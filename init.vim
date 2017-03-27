@@ -13,6 +13,8 @@ Plug 'yggdroot/indentline'
 Plug 'scrooloose/nerdtree'
 "git
 Plug 'tpope/vim-fugitive'
+"colour scheme
+Plug 'blueshirts/darcula'
 call plug#end()
 
 "path declarations
@@ -22,6 +24,13 @@ let g:racer_cmd = '~/.cargo/bin/racer'
 let g:racer_experimental_completer = 1
 let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unkown-linux-gnu/lib/rustlib/src/rust/src'
 let g:indentLine_enable = 1
+
+"colour scheme
+syntax enable
+colorscheme darcula
+
+"
+autocmd vimenter * NERDTree
 
 "key mappings
 nnoremap ; <Right>
