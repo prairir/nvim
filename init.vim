@@ -15,6 +15,8 @@ Plug 'scrooloose/nerdtree'
 Plug 'tpope/vim-fugitive'
 "colour scheme
 Plug 'blueshirts/darcula'
+"terminal integration
+Plug 'wvffle/vimterm'
 call plug#end()
 
 "path declarations
@@ -29,7 +31,7 @@ let g:indentLine_enable = 1
 syntax enable
 colorscheme darcula
 
-"
+"nerd tree autostart up
 autocmd vimenter * NERDTree
 
 "key mappings
@@ -44,6 +46,8 @@ nnoremap <C-l> <C-w>k
 nnoremap <C-k> <C-w>j
 nnoremap <C-j> <C-w>h
 
+nnoremap <F7> :call vimterm#toggle() <CR>
+tnoremap <F7> <C-\><C-n>:call vimterm#toggle() <CR>
 "setting tab spaces
 set tabstop=4
 
