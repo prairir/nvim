@@ -11,6 +11,8 @@ Plug 'tpope/vim-surround'
 Plug 'yggdroot/indentline'
 "nerd tree
 Plug 'scrooloose/nerdtree'
+"git
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "path declarations
