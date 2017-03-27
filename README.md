@@ -1,3 +1,3 @@
-NVIM INIT
+NVIM INIT/vimrc
 
 my vimrc/init.vim
