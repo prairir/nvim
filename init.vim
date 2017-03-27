@@ -24,7 +24,7 @@ let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 let g:racer_cmd = '~/.cargo/bin/racer'
 let g:racer_experimental_completer = 1
-let g:ycm_rust_src_path = '~/.rustup/toolchains/stable-x86_64-unkown-linux-gnu/lib/rustlib/src/rust/src'
+let g:ycm_rust_src_path = '/home/ryan/.rustup/toolchains/stable-x86_64-unknown-linux-gnu'
 let g:indentLine_enable = 1
 
 "colour scheme
