@@ -1,9 +1,10 @@
 call plug#begin('~/.config/nvim/plugged')
 
 "rust
+Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 "auto completion
-Plug 'Valloric/YouCompleteMe', {'do': './install.py --racer-completer'}
+Plug 'maralla/completor.vim'
 "delimitor
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
@@ -22,10 +23,11 @@ call plug#end()
 "path declarations
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
-let g:racer_cmd = '~/.cargo/bin/racer'
-let g:racer_experimental_completer = 1
-let g:ycm_rust_src_path = '/home/ryan/.rustup/toolchains/stable-x86_64-unknown-linux-gnu'
+let g:completor_python_binary = '/usr/bin/python3'
+let g:completor_racer_binary = '~/.cargo/bin/racer'
+"let g:ycm_rust_src_path = 'home/ryan/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
 let g:indentLine_enable = 1
+let g:completor_auto_trigger = 1
 
 "colour scheme
 syntax enable
@@ -33,6 +35,7 @@ colorscheme darcula
 
 "nerd tree autostart up
 autocmd vimenter * NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "key mappings
 nnoremap ; <Right>
@@ -48,6 +51,12 @@ nnoremap <C-j> <C-w>h
 
 nnoremap <F7> :call vimterm#toggle() <CR>
 tnoremap <F7> <C-\><C-n>:call vimterm#toggle() <CR>
+
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
+
+noremap <C-n> :NERDTreeToggle<CR>
 "setting tab spaces
 set tabstop=4
 
