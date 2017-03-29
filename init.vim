@@ -8,8 +8,6 @@ Plug 'maralla/completor.vim'
 "delimitor
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
-"for indention level
-Plug 'yggdroot/indentline'
 "nerd tree
 Plug 'scrooloose/nerdtree'
 "git
@@ -25,8 +23,6 @@ let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 let g:completor_python_binary = '/usr/bin/python3'
 let g:completor_racer_binary = '~/.cargo/bin/racer'
-"let g:ycm_rust_src_path = 'home/ryan/.rustup/toolchains/stable-x86_64-unknown-linux-gnu/lib/rustlib/src/rust/src'
-let g:indentLine_enable = 1
 let g:completor_auto_trigger = 1
 
 "colour scheme
@@ -35,7 +31,6 @@ colorscheme darcula
 
 "nerd tree autostart up
 autocmd vimenter * NERDTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 "key mappings
 nnoremap ; <Right>
