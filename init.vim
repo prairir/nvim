@@ -30,8 +30,9 @@ let g:completor_auto_trigger = 1
 syntax enable
 colorscheme darcula
 
-"nerd tree autostart up
+"nerd tree configuration 
 autocmd vimenter * NERDTree
+autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "key mappings
 nnoremap ; <Right>
