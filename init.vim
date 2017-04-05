@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 "git
 Plug 'tpope/vim-fugitive'
 "colour scheme
-Plug 'altercation/vim-colors-solarized'
+Plug 'w0ng/vim-hybrid'
 "terminal integration
 Plug 'wvffle/vimterm'
 call plug#end()
@@ -29,7 +29,7 @@ let g:completor_auto_trigger = 1
 "colour scheme
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme hybrid
 
 "nerd tree configuration 
 autocmd vimenter * NERDTree
