@@ -13,7 +13,7 @@ Plug 'scrooloose/nerdtree'
 "git
 Plug 'tpope/vim-fugitive'
 "colour scheme
-Plug 'blueshirts/darcula'
+Plug 'altercation/vim-colors-solarized'
 "terminal integration
 Plug 'wvffle/vimterm'
 call plug#end()
@@ -28,7 +28,8 @@ let g:completor_auto_trigger = 1
 
 "colour scheme
 syntax enable
-colorscheme darcula
+set background=dark
+colorscheme solarized
 
 "nerd tree configuration 
 autocmd vimenter * NERDTree
