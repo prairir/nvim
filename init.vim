@@ -22,8 +22,10 @@ call plug#end()
 let g:python_host_prog = '/usr/bin/python'
 let g:python3_host_prog = '/usr/bin/python3'
 let g:completor_python_binary = '/usr/bin/python3'
+"let g:completor_racer_binary = '~/.cargo/bin/racer'
 set hidden
 let g:racer_cmd = '~/.cargo/bin/racer'
+let g:racer_experimental_completor = 1
 let g:completor_auto_trigger = 1
 
 "colour scheme
