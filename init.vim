@@ -16,6 +16,8 @@ Plug 'tpope/vim-fugitive'
 Plug 'w0ng/vim-hybrid'
 "terminal integration
 Plug 'wvffle/vimterm'
+"syntax linter
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 "path declarations
@@ -27,6 +29,16 @@ set hidden
 let g:racer_cmd = '~/.cargo/bin/racer'
 let g:racer_experimental_completor = 1
 let g:completor_auto_trigger = 1
+
+"syntastic
+set statusline+=#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 "colour scheme
 syntax enable
