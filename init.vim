@@ -4,9 +4,9 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
 "ruby
-Plug 'tpope/vim-endwise'
+"Plug 'tpope/vim-endwise'
 "Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
+"Plug 'vim-ruby/vim-ruby'
 "auto completion
 Plug 'maralla/completor.vim'
 "snippets
