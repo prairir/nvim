@@ -3,8 +3,15 @@ call plug#begin('~/.config/nvim/plugged')
 "rust
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
+"ruby
+Plug 'tpope/vim-endwise'
+"Plug 'tpope/vim-rails'
+Plug 'vim-ruby/vim-ruby'
 "auto completion
 Plug 'maralla/completor.vim'
+"snippets
+Plug 'sirver/ultisnips'
+Plug 'honza/vim-snippets'
 "delimitor
 Plug 'raimondi/delimitmate'
 Plug 'tpope/vim-surround'
@@ -29,6 +36,12 @@ set hidden
 let g:racer_cmd = '~/.cargo/bin/racer'
 let g:racer_experimental_completor = 1
 let g:completor_auto_trigger = 1
+
+"snippets stuff
+let g:UltiSnipsExpandTrigger="<c-u>"
+let g:UltiSnipsJumpForwardTrigger="<c-i>"
+let g:UltiSnipsJumpBackwardTrigger="<c-y>"
+let g:UltiSnipsEditSplit="vertical"
 
 "syntastic
 set statusline+=#warningmsg#
