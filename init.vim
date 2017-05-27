@@ -39,7 +39,6 @@ let g:completor_auto_trigger = 1
 
 "snippets stuff
 let g:UltiSnipsExpandTrigger="<c-i>"
-let g:UltiSnipsJumpForwardTrigger="<c-i>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
