@@ -38,9 +38,9 @@ let g:racer_experimental_completor = 1
 let g:completor_auto_trigger = 1
 
 "snippets stuff
-let g:UltiSnipsExpandTrigger="<c-u>"
-let g:UltiSnipsJumpForwardTrigger="<c-i>"
-let g:UltiSnipsJumpBackwardTrigger="<c-y>"
+let g:UltiSnipsExpandTrigger="<c-i>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
 let g:UltiSnipsEditSplit="vertical"
 
 "syntastic
