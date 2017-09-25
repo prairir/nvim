@@ -68,10 +68,10 @@ nnoremap k <Down>
 nnoremap j <Left>
 nnoremap h ; 
 
-vnoremap j h 
-vnoremap k j
-vnoremap l k  
-vnoremap ; l
+vnoremap j <Left> 
+vnoremap k <Down>
+vnoremap l <Up>
+vnoremap ; <Right>
 nnoremap <C-;> <C-w>l
 nnoremap <C-l> <C-w>k
 nnoremap <C-k> <C-w>j
