@@ -89,6 +89,11 @@ noremap <C-n> :NERDTreeToggle<CR>
 set tabstop=4
 
 "line numbering
-set number
+set number relativenumber
+augroup numbertoggle
+	autocmd!
+	autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+	autocmd BufLeave,FocusLost,InsertEnter * set norelativenumber
+augroup END
 set nuw=3
 highlight LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE
