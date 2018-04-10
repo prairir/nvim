@@ -25,6 +25,8 @@ Plug 'w0ng/vim-hybrid'
 Plug 'wvffle/vimterm'
 "syntax linter
 Plug 'vim-syntastic/syntastic'
+"latex
+Plug 'lervag/vimtex'
 call plug#end()
 
 "path declarations
