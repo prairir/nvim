@@ -3,10 +3,6 @@ call plug#begin('~/.config/nvim/plugged')
 "rust
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
-"ruby
-"Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-rails'
-Plug 'vim-ruby/vim-ruby'
 "auto completion
 Plug 'maralla/completor.vim'
 "snippets
@@ -27,10 +23,11 @@ Plug 'wvffle/vimterm'
 Plug 'vim-syntastic/syntastic'
 "latex
 Plug 'lervag/vimtex'
+Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 call plug#end()
 
 "path declarations
-let g:python_host_prog = '/usr/bin/python'
+let g:python_host_prog = '/usr/bin/python2'
 let g:python3_host_prog = '/usr/bin/python3'
 let g:completor_python_binary = '/usr/bin/python3'
 "let g:completor_racer_binary = '~/.cargo/bin/racer'
@@ -63,6 +60,14 @@ colorscheme hybrid
 autocmd vimenter * NERDTree
 autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
+"vim lated preview
+autocmd Filetype tex setl updatetime=1
+
+"latex 
+filetype plugin on 
+filetype indent on 
+
+let g:vimtex_compiler_progname = 'nvr'
 "key mappings
 nnoremap ; <Right>
 nnoremap l <Up>
@@ -70,7 +75,8 @@ nnoremap k <Down>
 nnoremap j <Left>
 nnoremap h ; 
 
-vnoremap j <Left> 
+vnoremap h ;
+vnoremap j <Left>
 vnoremap k <Down>
 vnoremap l <Up>
 vnoremap ; <Right>
@@ -78,6 +84,9 @@ nnoremap <C-;> <C-w>l
 nnoremap <C-l> <C-w>k
 nnoremap <C-k> <C-w>j
 nnoremap <C-j> <C-w>h
+
+"reversing text
+vnoremap hrv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
 
 nnoremap <F7> :call vimterm#toggle() <CR>
 tnoremap <F7> <C-\><C-n>:call vimterm#toggle() <CR>
