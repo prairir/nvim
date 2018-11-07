@@ -98,6 +98,8 @@ inoremap <expr> <cr> pumvisible() ? "\<C-y>\<cr>" : "\<cr>"
 noremap <C-n> :NERDTreeToggle<CR>
 "setting tab spaces
 set tabstop=4
+set shiftwidth=0
+set expandtab
 
 "line numbering
 set number relativenumber
