@@ -1,5 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
+"slim
+Plug 'slim-template/vim-slim'
 "rust
 Plug 'racer-rust/vim-racer'
 Plug 'rust-lang/rust.vim'
