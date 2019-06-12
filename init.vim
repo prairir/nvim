@@ -71,21 +71,6 @@ filetype indent on
 
 let g:vimtex_compiler_progname = 'nvr'
 "key mappings
-nnoremap ; <Right>
-nnoremap l <Up>
-nnoremap k <Down>
-nnoremap j <Left>
-nnoremap h ; 
-
-vnoremap h ;
-vnoremap j <Left>
-vnoremap k <Down>
-vnoremap l <Up>
-vnoremap ; <Right>
-nnoremap <C-;> <C-w>l
-nnoremap <C-l> <C-w>k
-nnoremap <C-k> <C-w>j
-nnoremap <C-j> <C-w>h
 
 "reversing text
 vnoremap hrv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
