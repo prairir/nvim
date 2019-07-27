@@ -1,7 +1,6 @@
 call plug#begin('~/.config/nvim/plugged')
 
 "auto completion 
-
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
@@ -27,7 +26,6 @@ Plug 'wvffle/vimterm'
 Plug 'w0rp/ale'
 
 "latex
-Plug 'lervag/vimtex'
 Plug 'xuhdev/vim-latex-live-preview', { 'for': 'tex' }
 
 call plug#end()
@@ -51,17 +49,18 @@ autocmd vimenter * NERDTree
 autocmd bufenter * if(winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 "vim lated preview
-autocmd Filetype tex setl updatetime=1
 
 "latex 
-filetype plugin on 
-filetype indent on 
 
 let g:vimtex_compiler_progname = 'nvr'
+let g:livepreview_previewer = 'okular'
+let g:livepreview_engine = 'pdflatex'
+
 
 "key mappings
 
-let g:mapleader = "<space>"
+let g:mapleader = ","
+
 "reversing text
 vnoremap hrv c<C-O>:set revins<CR><C-R>"<Esc>:set norevins<CR>
 
@@ -85,6 +84,9 @@ nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
+
+"live preview toggle
+nnoremap <Leader>l :LLPStartPreview
 
 "setting tab spaces
 set tabstop=4
