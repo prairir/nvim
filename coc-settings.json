@@ -1,0 +1,15 @@
+{
+    // java location
+    "java.home": "/usr/bin/java",
+
+    "python.setInterpreter": "/usr/bin/python",
+
+    // supported css file types
+    "css.filetypes": [
+        "css",
+        "svelte",
+        "scss",
+        "less",
+        "wxss"
+    ]
+}
