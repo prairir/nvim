@@ -1,7 +1,7 @@
 {
     // java location
-    "java.home": "/usr/bin/java",
-
+    "java.home":"/usr/lib/jvm/java-13-openjdk",
+ 
     "python.setInterpreter": "/usr/bin/python",
 
     // supported css file types

@@ -7,7 +7,7 @@ Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-html', {'do': 'yarn install --frozen-lockfile'}
 Plug 'neoclide/coc-java', {'do': 'yarn install --frozen-lockfile'}
-Plug 'neoclide/coc-python'
+Plug 'neoclide/coc-python', {'do': 'yarn install --frozen-lockfile'}
 
 "delimitor
 Plug 'raimondi/delimitmate'
