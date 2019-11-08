@@ -1,8 +1,10 @@
 {
     // java location
     "java.home":"/usr/lib/jvm/java-13-openjdk",
- 
+
+    //python thing
     "python.setInterpreter": "/usr/bin/python",
+    "python.jediEnabled" : false,
 
     // supported css file types
     "css.filetypes": [
