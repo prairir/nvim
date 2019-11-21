@@ -6,6 +6,9 @@
     "python.setInterpreter": "/usr/bin/python",
     "python.jediEnabled" : false,
 
+    //rust support
+    "rust-client.rustupPath": "/usr/bin/rustup",
+
     // supported css file types
     "css.filetypes": [
         "css",
